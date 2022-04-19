@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Carta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="plato" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="plato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="precioeuros" type="xs:string"/>
+        <xs:element name="descripcion" type="xs:string"/>
+        <xs:element name="calorias" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="nombre" type="xs:string" use="required"/>
+      <xs:attribute name="tipo" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
